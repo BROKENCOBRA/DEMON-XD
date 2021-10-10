@@ -84,7 +84,7 @@ async def generate_cover(title, thumbnail):
                    & ~filters.via_bot)
 async def play(_, message: Message):
 
-    lel = await message.reply("`⏱ Bᴇᴇᴘ... Bᴏᴘ... Pʀᴏᴄᴇssɪɴɢ`.**")
+    lel = await message.reply("☠️ 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 ...𝐑𝐮𝐤𝐨 𝐍𝐚😘.**")
     
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -104,24 +104,24 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "`ᴀᴅᴅ ᴍᴇ ᴀs ᴀᴅᴍɪɴ ғɪʀsᴛ`.")
+                        "𝐀𝐝𝐝 𝐌𝐞 𝐀𝐬 𝐀𝐝𝐦𝐢𝐧 𝐅𝐢𝐫𝐬𝐭😋.")
                     return
 
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "`ᴀssɪsᴛᴀɴᴛ ɪs ᴊᴏɪɴᴇᴅ`.")
+                        message.chat.id, "𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 𝐈𝐬 𝐉𝐨𝐢𝐧𝐞𝐝 ..𝐇𝐮𝐫𝐫𝐚𝐲𝐲𝐲💋💋.")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     await lel.edit(
-                        f"<b>🛑 ғʟᴏᴏᴅ ᴇʀʀᴏʀ 🛑</b> \n\ʜᴇʟʟᴏ, {user.first_name}, ᴀssɪsᴛᴀɴᴛ ᴄᴏᴜʟᴅ'ɴᴛ ᴊᴏɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ. ᴍᴀʏ ʙᴇ ɪᴛs ʙᴀɴɴᴇᴅ ᴏʀ ᴀɴʏ ᴏᴛʜᴇʀ ɪssᴜᴇ")
+                        f"<b>🛑 𝐅𝐥𝐨𝐨𝐝 𝐞𝐫𝐫𝐨𝐫 🛑</b> \n\𝐇𝐞𝐥𝐥𝐨, {user.first_name}, 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 𝐂𝐨𝐮𝐥𝐝'𝐧𝐭 𝐉𝐨𝐢𝐧 𝐘𝐨𝐮𝐫 𝐆𝐫𝐨𝐮𝐩. 𝐌𝐚𝐲 𝐁𝐞 𝐈𝐭𝐬 𝐁𝐚𝐧𝐧𝐞𝐝 𝐎𝐫 𝐎𝐭𝐡𝐞𝐫 𝐈𝐬𝐬𝐮𝐞.")
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"<i>ʜᴇʏ, {user.first_name}, ᴀssɪsᴛᴀɴᴛ ɪs ɴᴏᴛ ʜᴇʀᴇ :( sᴇɴᴅ /play ᴄᴏᴍᴍᴀɴᴅ ғɪʀsᴛ ᴛᴏ ᴀᴅᴅ ᴀssɪsᴛᴀɴᴛ.</i>")
+            f"<i>𝐇𝐞𝐲, {user.first_name}, 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭 𝐈𝐬 𝐍𝐨𝐭 𝐇𝐞𝐫𝐞 :( 𝐒𝐞𝐧𝐝 /play 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐅𝐢𝐫𝐬𝐭 𝐓𝐨 𝐀𝐝𝐝 𝐀𝐬𝐬𝐢𝐬𝐭𝐚𝐧𝐭.</i>")
         return
     
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
@@ -130,7 +130,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"ᴠɪᴅᴇᴏ ɪs ʟᴏɴɢᴇʀ ᴛʜᴀɴ {DURATION_LIMIT} ᴍɪɴᴜᴛᴇs."
+                f"𝐕𝐢𝐝𝐞𝐨 𝐈𝐬 𝐋𝐨𝐧𝐠𝐞𝐫 𝐓𝐡𝐚𝐧🥺 {DURATION_LIMIT} 𝐌𝐢𝐧𝐮𝐭𝐞𝐬."
             )
 
         file_name = get_file_name(audio)
@@ -144,8 +144,8 @@ async def play(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        text="📣 ᴄʜᴀɴɴᴇʟ",
-                        url="https://t.me/Sanki_BOTs")
+                        text="🥱 𝐒𝐮𝐩𝐩𝐨𝐫𝐭",
+                        url="https://t.me/shivamdemon")
                    
                 ]
             ]
@@ -182,11 +182,11 @@ async def play(_, message: Message):
                 [
                     [
                         InlineKeyboardButton(
-                            text="📺 ᴄʜᴀɴɴᴇʟ",
-                            url=f"https://t.me/Sanki_BOTs"),
+                            text="❣️𝐎𝐰𝐧𝐞𝐫",
+                            url=f"https://t.me/shivamdemon"),
                         InlineKeyboardButton(
-                            text="ᴏᴡɴᴇʀ 🏷️",
-                            url=f"https://t.me/Sanki_Manager")
+                            text="✌️𝐁𝐡𝐚𝐢",
+                            url=f"https://t.me/alone_boy_xd_01")
 
                     ]
                 ]
@@ -200,25 +200,25 @@ async def play(_, message: Message):
                     [
                         [
                             InlineKeyboardButton(
-                                text="📺 ᴄʜᴀɴɴᴇʟ",
-                                url=f"https://t.me/Sanki_BOTs")
+                                text="🥱 𝐒𝐮𝐩𝐩𝐨𝐫𝐭",
+                                url=f"https://t.me/shivamdemon")
 
                         ]
                     ]
                 )
         if (dur / 60) > DURATION_LIMIT:
-             await lel.edit(f"ᴠɪᴅᴇᴏ ɪs ʟᴏɴɢᴇʀ ᴛʜᴀɴ {DURATION_LIMIT} ᴍɪɴᴜᴛᴇs.")
+             await lel.edit(f"𝐕𝐢𝐝𝐞𝐨 𝐈𝐬 𝐋𝐨𝐧𝐠𝐞𝐫 𝐓𝐡𝐚𝐧🥺 {DURATION_LIMIT} 𝐌𝐢𝐧𝐮𝐭𝐞𝐬.")
              return
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)     
         file_path = await converter.convert(youtube.download(url))
     else:
         if len(message.command) < 2:
-            return await lel.edit("🧐 **ᴡʜɪᴄʜ sᴏɴɢ ʏᴏᴜ ᴡᴀɴɴᴀ ᴘʟᴀʏ ??**")
-        await lel.edit("⏱ `Bᴇᴇᴘ... Bᴏᴘ... Pʀᴏᴄᴇssɪɴɢ`")
+            return await lel.edit("🧐 **𝐖𝐡𝐢𝐜𝐡 𝐒𝐨𝐧𝐠 𝐔 𝐖𝐚𝐧𝐭 𝐓𝐨 𝐏𝐥𝐚𝐲??**")
+        await lel.edit("☠️ 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 ...𝐑𝐮𝐤𝐨 𝐧𝐚😘")
         query = message.text.split(None, 1)[1]
         # print(query)
-        await lel.edit("⏱ `Bᴇᴇᴘ... Bᴏᴘ... Pʟᴀʏɪɴɢ`")
+        await lel.edit("☠️ 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 ...𝐑𝐮𝐤𝐨 𝐧𝐚😘")
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
             url = f"https://youtube.com{results[0]['url_suffix']}"
@@ -241,7 +241,7 @@ async def play(_, message: Message):
                 
         except Exception as e:
             await lel.edit(
-                "sᴏʀʀʏ sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ ☹ ️ᴛʀʏ ᴀɢᴀɪɴ ᴡɪᴛʜ ʀɪɢʜᴛ sᴘᴇʟʟɪɴɢ..."
+                "𝐒𝐨𝐧𝐠 𝐍𝐨𝐭 𝐅𝐨𝐮𝐧𝐝 ☹ ️𝐓𝐫𝐲 𝐀𝐠𝐚𝐢𝐧 𝐖𝐢𝐭𝐡 𝐀𝐧𝐨𝐭𝐡𝐞𝐫 𝐒𝐩𝐞𝐥𝐥𝐢𝐧𝐠..."
             )
             print(str(e))
             return
@@ -250,18 +250,18 @@ async def play(_, message: Message):
                 [
                     [
                         InlineKeyboardButton(
-                            text="📺 ᴄʜᴀɴɴᴇʟ",
-                            url=f"https://t.me/Sanki_BOTs"),
+                            text="❣️𝐎𝐰𝐧𝐞𝐫",
+                            url=f"https://t.me/Shivamdemon"),
                         InlineKeyboardButton(
-                            text="ᴏᴡɴᴇʀ 🏷",
-                            url=f"https://t.me/Sanki_Manager")
+                            text="✌️𝐁𝐡𝐚𝐢",
+                            url=f"https://t.me/Alone_boy_xd_01")
 
                     ]
                 ]
             )
         
         if (dur / 60) > DURATION_LIMIT:
-             await lel.edit(f"ᴠɪᴅᴇᴏ ɪs ʟᴏɴɢᴇʀ ᴛʜᴀɴ {DURATION_LIMIT} ᴍɪɴᴜᴛᴇs.")
+             await lel.edit(f"𝐕𝐢𝐝𝐞𝐨 𝐈𝐬 𝐋𝐨𝐧𝐠𝐞𝐫 𝐓𝐡𝐚𝐧🥺 {DURATION_LIMIT} 𝐌𝐢𝐧𝐮𝐭𝐞𝐬.")
              return
         requested_by = message.from_user.first_name
         await generate_cover(requested_by, title, views, duration, thumbnail)  
@@ -271,7 +271,7 @@ async def play(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo="final.png", 
-        caption = f"💡 **Tʀᴀᴄᴋ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴜᴇ »** `{position}`\n\n🏷 **Nᴀᴍᴇ :** [{title[:50]}]({url})\n⏱ **Dᴜʀᴀᴛɪᴏɴ :** `{duration}`\n🎧 **Rᴇǫᴜᴇsᴛ Bʏ :** {message.from_user.mention}",
+        caption = f"🔥 **𝐓𝐫𝐚𝐜𝐤 𝐀𝐝𝐝𝐞𝐝 𝐓𝐨 𝐐𝐮𝐞𝐮 »** `{position}`\n\n🎵 **𝐍𝐚𝐦𝐞 :** [{title[:50]}]({url})\n🕛 **𝐃𝐮𝐫𝐚𝐭𝐢𝐨𝐧 :** `{duration}`\n🎧 **𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐁𝐲:** {message.from_user.mention}",
         ),
         reply_markup=keyboard)
         os.remove("final.png")
@@ -281,8 +281,8 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption = f"🏷 **Nᴀᴍᴇ :** [{title[:50]}]({url})\n⏱ **Dᴜʀᴀᴛɪᴏɴ :** `{duration}`\n💡 **Sᴛᴀᴛᴜs :** `Pʟᴀʏɪɴɢ`\n" \
-                    + f"🎧 **Rᴇǫᴜᴇsᴛ ʙʏ :** {message.from_user.mention}",
+        caption = f"🎵**𝐍𝐚𝐦𝐞 :** [{title[:50]}]({url})\n🕛 **𝐃𝐮𝐫𝐚𝐭𝐢𝐨𝐧 :** `{duration}`\n" \
+                    + f"🎧 **𝐑𝐞𝐪𝐮𝐞𝐬𝐭 𝐁𝐲 :** {message.from_user.mention}",
         ), )
         os.remove("final.png")
         return await lel.delete()
