@@ -24,9 +24,9 @@ from youtube_dl.utils import (
 async def song(client, message):
     cap = "@JEBotZ"
     url = message.text.split(None, 1)[1]
-    rkp = await message.reply("`⏰ Bᴇᴇᴘ... Bᴏᴘ... Pʀᴏᴄᴇssɪɴɢ`")
+    rkp = await message.reply("`☠️ 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 ... 𝐑𝐮𝐤𝐨 𝐍𝐚😘.")
     if not url:
-        await rkp.edit("**Wʜɪᴄʜ Sᴏɴɢ Yᴏᴜ Wᴀɴᴛ ??**\nUsᴀɢᴇ`/song <song name>`")
+        await rkp.edit("**𝐖𝐡𝐢𝐜𝐡 𝐒𝐨𝐧𝐠 𝐘𝐨𝐮 𝐖𝐚𝐧𝐭 ??**\nUsage`/song <song name>`")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
     test = search.result()
     p = json.loads(test)
@@ -34,7 +34,7 @@ async def song(client, message):
     try:
         url = q[0]["link"]
     except BaseException:
-        return await rkp.edit("Fᴀɪʟᴇᴅ Tᴏ Fɪɴᴅ Tʜᴀᴛ Sᴏɴɢ...")
+        return await rkp.edit("𝐅𝐚𝐢𝐥𝐞𝐝 𝐓𝐨 𝐅𝐢𝐧𝐝 𝐓𝐡𝐚𝐭 𝐒𝐨𝐧𝐠🧐...")
     type = "audio"
     if type == "audio":
         opts = {
@@ -58,7 +58,7 @@ async def song(client, message):
         }
         song = True
     try:
-        await rkp.edit("`⏰ Bᴇᴇᴘ... Bᴏᴘ...Dᴏᴡɴʟᴏᴀᴅɪɴɢ...`")
+        await rkp.edit("`☠️ 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 ...𝐑𝐮𝐤𝐨 𝐍𝐚😘.")
         with YoutubeDL(opts) as rip:
             rip_data = rip.extract_info(url)
     except DownloadError as DE:
@@ -92,7 +92,7 @@ async def song(client, message):
         return
     time.time()
     if song:
-        await rkp.edit("`⏰ Bᴇᴇᴘ... Bᴏᴘ...Uᴘʟᴏᴀᴅɪɴɢ...`") #ImJanindu
+        await rkp.edit("☠️ 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠 ...𝐑𝐮𝐤𝐨 𝐍𝐚😘") #ImJanindu
         lol = "./etc/thumb.jpg"
         lel = await message.reply_audio(
                  f"{rip_data['id']}.mp3",
